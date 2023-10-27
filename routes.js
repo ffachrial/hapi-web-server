@@ -55,7 +55,14 @@ const routes = [
             const { username, password } = request.payload;
 
             return `Welcome ${username}!`;
-        }
+        },
+    },
+    {
+        method: 'POST',
+        path: '/user',
+        handler: (request, h) => {
+            return h.response('created').code(201);
+        },
     },
 ];
 
